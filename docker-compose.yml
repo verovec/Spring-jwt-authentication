@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:  
+  adminer:
+    image: adminer:4.7.6
+    restart: always
+    ports:
+      - 8080:8080
+
+
+  database:
+    image: mysql:5.7
+    volumes:
+      - "./dbdata:/var/lib/mysql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: quest_web
+      MYSQL_USER: application
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
