@@ -49,7 +49,7 @@ spring-boot-jwt/
 
 ### DESCRIPTION :
 
-This project show you how to setup registration and authentication with JWT in spring-boot
+This project shows how to setup registration and authentication with JWT in spring-boot
 
 ### HOW TO :
 
