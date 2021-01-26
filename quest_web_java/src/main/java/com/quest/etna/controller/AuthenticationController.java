@@ -86,7 +86,7 @@ public class AuthenticationController {
 		}
 		catch(Exception e) {
 			response.put("error", e.getMessage());
-			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
 		}
 	}
 
@@ -104,7 +104,7 @@ public class AuthenticationController {
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.ACCEPTED);
 		}catch (Exception e) {
 			response.put("error", e.getMessage());
-			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
 		}
 	}
 
